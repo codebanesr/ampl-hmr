@@ -1,0 +1,2 @@
+# ampl-hmr
+hmr solution
