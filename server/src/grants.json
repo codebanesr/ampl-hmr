@@ -1,5 +1,11 @@
 [
   {
+    "role": "admin",
+    "resource": "User",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
     "role": "patient",
     "resource": "User",
     "action": "read:own",
@@ -9,6 +15,12 @@
     "role": "doctor",
     "resource": "User",
     "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "User",
+    "action": "create:any",
     "attributes": "*"
   },
   {
@@ -24,6 +36,12 @@
     "attributes": "*"
   },
   {
+    "role": "admin",
+    "resource": "User",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
     "role": "patient",
     "resource": "User",
     "action": "update:any",
@@ -36,6 +54,12 @@
     "attributes": "*"
   },
   {
+    "role": "admin",
+    "resource": "User",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
     "role": "patient",
     "resource": "User",
     "action": "delete:any",
@@ -45,6 +69,12 @@
     "role": "doctor",
     "resource": "User",
     "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "User",
+    "action": "read:any",
     "attributes": "*"
   },
   {
@@ -60,6 +90,12 @@
     "attributes": "*"
   },
   {
+    "role": "admin",
+    "resource": "Prescription",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
     "role": "patient",
     "resource": "Prescription",
     "action": "read:own",
@@ -69,6 +105,12 @@
     "role": "doctor",
     "resource": "Prescription",
     "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Prescription",
+    "action": "create:any",
     "attributes": "*"
   },
   {
@@ -84,6 +126,12 @@
     "attributes": "*"
   },
   {
+    "role": "admin",
+    "resource": "Prescription",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
     "role": "patient",
     "resource": "Prescription",
     "action": "update:any",
@@ -96,6 +144,12 @@
     "attributes": "*"
   },
   {
+    "role": "admin",
+    "resource": "Prescription",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
     "role": "patient",
     "resource": "Prescription",
     "action": "delete:any",
@@ -105,6 +159,12 @@
     "role": "doctor",
     "resource": "Prescription",
     "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Prescription",
+    "action": "read:any",
     "attributes": "*"
   },
   {
