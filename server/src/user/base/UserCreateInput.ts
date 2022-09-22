@@ -11,9 +11,7 @@ https://docs.amplication.com/docs/how-to/custom-code
   */
 import { InputType, Field } from "@nestjs/graphql";
 import { ApiProperty } from "@nestjs/swagger";
-import { IsString, IsOptional, ValidateNested, IsJSON } from "class-validator";
-import { PrescriptionCreateNestedManyWithoutUsersInput } from "./PrescriptionCreateNestedManyWithoutUsersInput";
-import { Type } from "class-transformer";
+import { IsString, IsOptional, IsJSON } from "class-validator";
 import { GraphQLJSONObject } from "graphql-type-json";
 import { InputJsonValue } from "../../types";
 @InputType()
@@ -47,30 +45,6 @@ class UserCreateInput {
   @IsString()
   @Field(() => String)
   password!: string;
-
-  @ApiProperty({
-    required: false,
-    type: () => PrescriptionCreateNestedManyWithoutUsersInput,
-  })
-  @ValidateNested()
-  @Type(() => PrescriptionCreateNestedManyWithoutUsersInput)
-  @IsOptional()
-  @Field(() => PrescriptionCreateNestedManyWithoutUsersInput, {
-    nullable: true,
-  })
-  prescriptionDoctor?: PrescriptionCreateNestedManyWithoutUsersInput;
-
-  @ApiProperty({
-    required: false,
-    type: () => PrescriptionCreateNestedManyWithoutUsersInput,
-  })
-  @ValidateNested()
-  @Type(() => PrescriptionCreateNestedManyWithoutUsersInput)
-  @IsOptional()
-  @Field(() => PrescriptionCreateNestedManyWithoutUsersInput, {
-    nullable: true,
-  })
-  prescriptionPatient?: PrescriptionCreateNestedManyWithoutUsersInput;
 
   @ApiProperty({
     required: true,
