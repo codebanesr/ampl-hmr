@@ -11,9 +11,7 @@ https://docs.amplication.com/docs/how-to/custom-code
   */
 import { InputType, Field } from "@nestjs/graphql";
 import { ApiProperty } from "@nestjs/swagger";
-import { IsString, IsOptional, ValidateNested, IsJSON } from "class-validator";
-import { PrescriptionUpdateManyWithoutUsersInput } from "./PrescriptionUpdateManyWithoutUsersInput";
-import { Type } from "class-transformer";
+import { IsString, IsOptional, IsJSON } from "class-validator";
 import { GraphQLJSONObject } from "graphql-type-json";
 import { InputJsonValue } from "../../types";
 @InputType()
@@ -50,30 +48,6 @@ class UserUpdateInput {
     nullable: true,
   })
   password?: string;
-
-  @ApiProperty({
-    required: false,
-    type: () => PrescriptionUpdateManyWithoutUsersInput,
-  })
-  @ValidateNested()
-  @Type(() => PrescriptionUpdateManyWithoutUsersInput)
-  @IsOptional()
-  @Field(() => PrescriptionUpdateManyWithoutUsersInput, {
-    nullable: true,
-  })
-  prescriptionDoctor?: PrescriptionUpdateManyWithoutUsersInput;
-
-  @ApiProperty({
-    required: false,
-    type: () => PrescriptionUpdateManyWithoutUsersInput,
-  })
-  @ValidateNested()
-  @Type(() => PrescriptionUpdateManyWithoutUsersInput)
-  @IsOptional()
-  @Field(() => PrescriptionUpdateManyWithoutUsersInput, {
-    nullable: true,
-  })
-  prescriptionPatient?: PrescriptionUpdateManyWithoutUsersInput;
 
   @ApiProperty({
     required: false,
